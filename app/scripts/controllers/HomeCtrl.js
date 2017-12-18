@@ -1,8 +1,9 @@
 (function() {
-    function HomeCtrl($scope) {
-    }
+  function HomeCtrl(Task) {
+    this.tasks = Task.all;
+  };
 
-    angular
-        .module('blocitoff')
-        .controller('HomeCtrl', ['$scope', HomeCtrl]);
+  angular
+    .module('blocitoff')
+    .controller('HomeCtrl', ['Task', HomeCtrl]);
 })();

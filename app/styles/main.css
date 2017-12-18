@@ -1,0 +1,70 @@
+*, *::before, *::after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  font-family: serif;
+  background-color: #FFFFFF;
+}
+
+.hero-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 7.75rem;
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+.hero-title {
+  padding: 0 0 0 1rem;
+}
+
+.new-task {
+  position: relative;
+  left: 0.5rem;
+  width: 6rem;
+  padding: 0.1rem;
+  margin: 0 0 1rem 1rem;
+}
+
+.task-content {
+  position: relative;
+  left: 0;
+  top: 8rem;
+  height: 100%;
+  width: 100%;
+}
+
+.task-list {
+  top: 5rem;
+}
+
+.task-description{
+  padding: 0 0 1rem 0;
+}
+
+@media (min-width: 640px) {
+    html { font-size: 120%; }
+    .hero-content {
+      height: 4rem;
+    }
+    .new-task {
+      position: absolute;
+      left: 13rem;
+      top: 1.25rem;
+      width: 6rem;
+    }
+    .task-content {
+      position: relative;
+      left: 0;
+      top: 4rem;
+    }
+}
