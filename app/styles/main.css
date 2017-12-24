@@ -10,61 +10,66 @@ html {
 }
 
 body {
-  font-family: serif;
-  background-color: #FFFFFF;
+  font-family: "Fjord One"; serif;
+  background-color: #FCFCFC;
+}
+
+.nav-bar {
+  position: absolute;
+  right: 4rem;
 }
 
 .hero-content {
   position: absolute;
   left: 0;
-  top: 0;
-  height: 7.75rem;
+  top: 3rem;
+  height: 5rem;
   width: 100%;
-  background-color: #f3f3f3;
+  background-color: #54F2F2;
 }
 
 .hero-title {
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 2.5rem;
 }
 
 .new-task {
-  position: relative;
-  left: 0.5rem;
-  width: 6rem;
-  padding: 0.1rem;
-  margin: 0 0 1rem 1rem;
+  position: absolute;
+  top: 8rem;
+  width: 100%;
+  background-color: #5EB1BF;
+}
+
+.new-task-header {
+  padding: 1rem 0 1rem 2.5rem;
+}
+
+.new-task-field {
+  padding: 0 0 1rem 2.5rem;
+}
+
+.new-field {
+  margin: 0 2rem 0 0;
+  width: 30%
 }
 
 .task-content {
   position: relative;
   left: 0;
-  top: 8rem;
+  top: 14rem;
   height: 100%;
   width: 100%;
 }
 
 .task-list {
   top: 5rem;
+  padding: 0 2.5rem 0 2.5rem;
 }
 
-.task-description{
-  padding: 0 0 1rem 0;
-}
 
-@media (min-width: 640px) {
+
+/*@media (min-width: 640px) {
     html { font-size: 120%; }
     .hero-content {
       height: 4rem;
     }
-    .new-task {
-      position: absolute;
-      left: 13rem;
-      top: 1.25rem;
-      width: 6rem;
-    }
-    .task-content {
-      position: relative;
-      left: 0;
-      top: 4rem;
-    }
-}
+}*/

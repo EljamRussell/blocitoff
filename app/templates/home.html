@@ -1,3 +1,35 @@
-<section class="title">
-      <h3>Home Page</h3>
+<div class="title">
+      <h3>Current Tasks</h3>
+</div>
+
+<div class="tasks-container">
+    <div ng-repeat= "task in tasks"> {{task.content}} </div>
+</div>
+
+<nav class="nav-bar">
+  <h5> Active Tasks </h5>
+</nav>
+
+<section class="hero-content">
+  <h1 class="hero-title">Active Tasks</h1>
+</section>
+
+<section class="new-task">
+  <div class="new-task-header">
+    Task Name
+  </div>
+  <div class="new-task-field">
+    <input type="text" name="task-name" value="New Task Name">
+    <input type="text" name="task-description" value="New Task Description">
+  </div>
+</section>
+
+<section class="task-content">
+  <div class="task-list" ng-repeat="task in home.tasks">
+    <h3>{{ task.title }}</h3>
+    <p>Created: {{ task.createdAt }}
+    <p class="task-description">Description: {{ task.description }}</p>
+    <hr class="task-rule">
+  </div>
+
 </section>

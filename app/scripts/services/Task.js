@@ -5,11 +5,15 @@
 
     return {
       all: tasks,
-      add: function(newTask) {
-        rooms.$add({ name: newTask });
+      send: function(newTask) {
+        tasks.$add(newTask);
+
+        //add: function(newTask) {
+        //rooms.$add({ name: newTask }); 
       }
     }
   };
+
 
   angular
     .module('blocitoff')
