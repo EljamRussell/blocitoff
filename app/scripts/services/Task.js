@@ -10,7 +10,7 @@
 
         //add: function(newTask) {
         //rooms.$add({ name: newTask });
-      //}
+      }
     }
   };
 

@@ -15,7 +15,9 @@
 <body>
   <h2>Blocitoff </h2>
   <h4>A Self Destructive To Do List</h4>
-
+  <nav class="nav-bar">
+    <a ui-sref="home">Tasks</a> | <a ui-sref="archive">Archive</a>
+  </nav>
   <ui-view></ui-view>
   <script src="https://momentjs.com/downloads/moment.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -49,6 +51,7 @@
   <!-- Application Files -->
   <script src="/scripts/app.js"></script>
   <script src="/scripts/controllers/HomeCtrl.js"></script>
+  <script src="/scripts/controllers/ArchiveCtrl.js"></script>
   <script src="/scripts/services/Task.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
           title: this.title,
           description: this.description,
           createdAt: moment().dayOfYear(),
-          completed: this.completed
+          completed: false
         });
         this.title = '';
       }

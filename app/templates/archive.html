@@ -1,0 +1,26 @@
+<section class="hero-content">
+  <h1 class="hero-title">Archive</h1>
+</section>
+
+<section class="new-task">
+  <div class="new-task-header">
+    Task Name 
+  </div>
+  <div class="new-task-field" ng-submit="home.addTask()">
+    <input type="text" class="task-field" ng-model="task.title" name="title" value="I'm a new Task Name!">
+    <input type="text" class="task-field" ng-model="task.description" value="I'm a new Task Description!">
+    <input type="submit" class="submit" value="Add Task">
+  </div>
+</section>
+
+<section class="task-content">
+  <div class="task-list" ng-repeat="task in archive.tasks">
+    <div ng-hide="archive.show(task)">
+      <h3 class="archive-title"><input class="task-checkbox" type="checkbox"> {{ task.title }}</h3>
+      <p>Created: {{ task.created }}
+      <p class="task-description">Description: {{ task.description }}</p>
+      <hr class="task-rule">
+    </div>
+  </div>
+
+</section>
