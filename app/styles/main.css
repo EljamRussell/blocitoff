@@ -65,7 +65,11 @@ body {
   padding: 0 2.5rem 0 2.5rem;
 }
 
-
+.task-checkbox {
+  position: relative;
+  bottom: 0.25rem;
+  right: 0.25rem;
+}
 
 /*@media (min-width: 640px) {
     html { font-size: 120%; }
