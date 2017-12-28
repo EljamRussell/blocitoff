@@ -11,7 +11,20 @@ html {
 
 body {
   font-family: "Fjord One"; serif;
+  color: #042A2B;
   background-color: #FCFCFC;
+}
+
+a:link {
+  color: #042A2B;
+}
+
+a:visited {
+  color: #042A2B;
+}
+
+a:hover {
+  color: #5EB1BF;
 }
 
 .nav-bar {
@@ -39,23 +52,52 @@ body {
   background-color: #5EB1BF;
 }
 
-.new-task-header {
+.new-task-field {
   padding: 1rem 0 1rem 2.5rem;
 }
 
-.new-task-field {
-  padding: 0 0 1rem 2.5rem;
+.task-field {
+  margin: 0 1rem 0.25rem 0;
+  padding: 0.25rem;
+  width: 30%;
+  border: none;
+  border-radius: 3px;
 }
 
-.new-field {
-  margin: 0 2rem 0 0;
-  width: 30%
+.priority {
+  margin: 0 1rem 0 0;
+  height: 1.75rem;
+}
+
+.submit {
+  background-color: #F4E04D;
+  border-style: solid;
+  border-color: #F4E04D;
+  border-width: 3px;
+  border-radius: 3px;
+  color: #042A2B;
+  padding: 0rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.submit:hover {
+  background-color: #f4edb7;
+  border-width: 3px;
+  border-color: #F4E04D;
+}
+
+.submit:active {
+  background-color: #F4E04D;
+  border-width: 3px;
+  border-color: #F4E04D;
 }
 
 .task-content {
   position: relative;
   left: 0;
-  top: 14rem;
+  top: 12rem;
   height: 100%;
   width: 100%;
 }
@@ -66,18 +108,18 @@ body {
 }
 
 .task-checkbox {
+  float: left;
   position: relative;
-  bottom: 0.25rem;
-  right: 0.25rem;
+  top: 0.25rem;
+}
+
+.task-title {
+  position: relative;
+  left: 0.5rem;
 }
 
 .archive-title {
+  position: relative;
+  left: 0.5rem;
   text-decoration: line-through;
 }
-
-/*@media (min-width: 640px) {
-    html { font-size: 120%; }
-    .hero-content {
-      height: 4rem;
-    }
-}*/

@@ -5,11 +5,8 @@
 
     return {
       all: tasks,
-      send: function(newTask) {
-      tasks.$add(newTask);
-
-        //add: function(newTask) {
-        //rooms.$add({ name: newTask });
+      addTask: function(newTask) {
+        tasks.$add(newTask);
       }
     }
   };

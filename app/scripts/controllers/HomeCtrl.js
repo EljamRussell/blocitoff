@@ -1,32 +1,33 @@
 (function() {
-  function HomeCtrl(Task) {
+  function HomeCtrl(Task, $scope) {
     this.tasks = Task.all;
 
-    this.hide = function(task) {
-      return task.created < (moment().dayOfYear() - 7) || task.completed == true
-
-
-    this.addTask = function () {
-      if (this.title) {
-        this.task.$add({
-          title: this.title,
-          description: this.description,
-          createdAt: moment().dayOfYear(),
-          completed: false
-        });
-        this.title = '';
-      }
+    this.show = function(task) {
+      var minus7days = Date.now() - (24*60*60*7*1000);
+      return task.completed == false && task.created > minus7days
     };
-  };
 
-    this.expiredTask = function (createdAt) {
-      if (createdAt < Date.now() - 604800000) {
-        return true;
+    this.addTask = function(messageTitle, messageDescription, taskPriority) {
+      if (messageTitle) {
+        var newTask = {
+          title: messageTitle,
+          description: messageDescription,
+          priority: taskPriority,
+          created: firebase.database.ServerValue.TIMESTAMP,
+          completed: false
+        };
+        Task.addTask(newTask);
+      }
+      $scope.clearfunction = function(event){
+        event.messageTitle = null;
+        event.messageDescription = null;
+        event.taskPriority = "Low";
       }
     }
+
   }
 
   angular
   .module('blocitoff')
-  .controller('HomeCtrl', ['Task', HomeCtrl]);
+  .controller('HomeCtrl', ['Task', '$scope', HomeCtrl]);
 })();
