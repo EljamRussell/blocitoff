@@ -7,19 +7,19 @@
     <input type="text" class="task-field" ng-model="messageTitle" placeholder="Name your new task">
     <input type="text" class="task-field" ng-model="messageDescription" placeholder="Describe your new task">
     <select class="priority" ng-model="taskPriority">
-      <option value="High">High</option>
-      <option value="Medium">Medium</option>
-      <option value="Low" >Low</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
     </select>
-    <button class="submit" ng-click="home.addTask(messageTitle, messageDescription, taskPriority); clearfunction(this)">Add Task</button>
+    <button class="submit" ng-click="archive.addTask(messageTitle, messageDescription, taskPriority); clearfunction(this)">Add Task</button>
   </div>
 </section>
 
 <section class="task-content">
-  <div class="task-list" ng-repeat="task in archive.tasks">
+  <div class="task-list" ng-repeat="task in archive.tasks | orderBy:'priority'">
     <div ng-show="archive.show(task)">
       <div>
-        <input class="task-checkbox" type="checkbox">
+        <input class="task-checkbox" type="checkbox" ng-click="archive.taskStatus(task)">
         <h3 class="archive-title">{{ task.title }}</h3>
       </div>
       <p class="task-priority">Priority: {{ task.priority }} | Created: {{ task.created | date:'short'  }}</p>

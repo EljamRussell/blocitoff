@@ -1,6 +1,9 @@
 (function() {
   function HomeCtrl(Task, $scope) {
     this.tasks = Task.all;
+    this.taskStatus = function (task) {
+      Task.completeTask(task);
+    }
 
     this.show = function(task) {
       var minus7days = Date.now() - (24*60*60*7*1000);
@@ -21,7 +24,7 @@
       $scope.clearfunction = function(event){
         event.messageTitle = null;
         event.messageDescription = null;
-        event.taskPriority = "Low";
+        event.taskPriority = "3";
       }
     }
 
